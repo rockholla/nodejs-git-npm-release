@@ -1,0 +1,5 @@
+/src
+/tests
+/jest.*
+/.eslint*
+/.babelrc
