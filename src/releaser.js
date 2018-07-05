@@ -54,7 +54,9 @@ class Releaser {
       shell.exec(`git commit -m "updating package.json to ${this.packageJson.version} via git-npm-release"`)
       let currentBranch = shell.exec('git rev-parse --abbrev-ref HEAD', { cwd: this.projectPath }).trim()
       if (currentBranch !== 'master') {
-        shell.exec(`git checkout master && git merge ${currentBranch}`, { cwd: this.projectPath })
+        shell.exec('git checkout master', { cwd: this.projectPath })
+        shell.exec(`git merge ${currentBranch}`, { cwd: this.projectPath })
+        shell.exec(`git checkout ${currentBranch}`, { cwd: this.projectPath })
       }
       shell.exec(`git tag -a ${this.packageJson.version} -m "Tagging version ${this.packageJson.version} via git-npm-release"`, { cwd: this.projectPath })
       shell.exec('git push --all origin', { cwd: this.projectPath })
