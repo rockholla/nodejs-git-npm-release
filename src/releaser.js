@@ -56,7 +56,7 @@ class Releaser {
       if (currentBranch !== 'master') {
         shell.exec(`git checkout master && git merge ${currentBranch}`, { cwd: this.projectPath })
       }
-      shell.exec(`git tag -a ${version} -m "Tagging version ${version} via git-npm-release"`, { cwd: this.projectPath })
+      shell.exec(`git tag -a ${this.packageJson.version} -m "Tagging version ${this.packageJson.version} via git-npm-release"`, { cwd: this.projectPath })
       shell.exec('git push --all origin', { cwd: this.projectPath })
       shell.exec('git push --tags origin', { cwd: this.projectPath })
       shell.exec(`npm publish --access ${permission}`, { cwd: this.projectPath })
