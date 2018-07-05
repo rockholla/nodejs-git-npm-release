@@ -17,7 +17,7 @@ npm install --save-dev @rockholla/git-npm-release
 When you're done developing everything for a release on your project and have committed everything:
 
 ```
-./node_modules/.bin/git-npm-release
+./node_modules/.bin/git-npm-release [public|restricted (default = public)]
 ```
 
 The command will do the following:
@@ -34,6 +34,6 @@ You might also consider making an npm script to call the git-npm-release command
 
 ```
 "scripts": {
-  "release": "git-npm-release"
+  "release": "git-npm-release [public|restricted]"
 }
 ```

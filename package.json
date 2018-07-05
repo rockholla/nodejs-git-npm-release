@@ -1,6 +1,6 @@
 {
   "name": "@rockholla/git-npm-release",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A helper around packaging and pushing an npm and git release for a project",
   "private": false,
   "repository": {
@@ -30,7 +30,9 @@
     "build": "npm run build-only",
     "build-only": "babel src --out-dir lib",
     "test": "jest -c jest.config.js",
-    "lint": "eslint src/ tests/"
+    "test-manual": "rm -rf tests/.project; cp -r tests/.project-template tests/.project && cd tests/.project && npm install --production; git init",
+    "lint": "eslint src/ tests/",
+    "release": "node bin/git-npm-release.js"
   },
   "dependencies": {
     "inquirer": "^6.0.0",
@@ -43,6 +45,8 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "jest": "^23.1.0",
+    "recursive-copy": "^2.0.9",
+    "rimraf": "^2.6.2",
     "webpack": "^4.12.0"
   }
 }

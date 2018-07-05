@@ -1,0 +1,14 @@
+{
+  "name": "@rockholla/git-npm-release-tests",
+  "version": "0.1.0",
+  "description": "git-npm-release tests",
+  "author": "git-npm-release tests",
+  "repository": "https://github.com/rockholla/nodejs-git-npm-release",
+  "license": "ISC",
+  "scripts": {
+    "release": "git-npm-release"
+  },
+  "dependencies": {
+    "@rockholla/git-npm-release": "file:../.."
+  }
+}
