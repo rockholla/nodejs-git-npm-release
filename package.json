@@ -32,7 +32,7 @@
     "test": "jest -c jest.config.js",
     "test-manual": "rm -rf tests/.project; cp -r tests/.project-template tests/.project && cd tests/.project && npm install --production; git init",
     "lint": "eslint src/ tests/",
-    "release": "node bin/git-npm-release.js"
+    "release": "npm run build-only && node bin/git-npm-release.js"
   },
   "dependencies": {
     "inquirer": "^6.0.0",
