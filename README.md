@@ -2,11 +2,10 @@
 
 A helper around packaging and pushing an npm and git release for a project
 
-`develop` branch:
-[![Build Status](https://travis-ci.org/rockholla/nodejs-git-npm-release.svg?branch=develop)](https://travis-ci.org/rockholla/nodejs-git-npm-release)
-
-`master` branch:
-[![Build Status](https://travis-ci.org/rockholla/nodejs-git-npm-release.svg?branch=master)](https://travis-ci.org/rockholla/nodejs-git-npm-release)
+| Branch    | Status                                                                                                                                               |
+| --------  | ---------------------------------------------------------------------------------------------------------------------------------------------------  |
+| `develop` | [![Build Status](https://travis-ci.org/rockholla/nodejs-git-npm-release.svg?branch=develop)](https://travis-ci.org/rockholla/nodejs-git-npm-release) |
+| `master`  | [![Build Status](https://travis-ci.org/rockholla/nodejs-git-npm-release.svg?branch=master)](https://travis-ci.org/rockholla/nodejs-git-npm-release)  |
 
 ## Usage
 
