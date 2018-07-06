@@ -16,7 +16,10 @@
   },
   "author": "Rockholla, LLC",
   "contributors": [
-    "Patrick Force <patrickforce@gmail.com>"
+    {
+      "name": "Patrick Force",
+      "email": "patrickforce@gmail.com"
+    }
   ],
   "license": "AGPL-3.0-or-later",
   "bugs": {
