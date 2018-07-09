@@ -13,7 +13,7 @@ A helper around packaging and pushing an npm and git release for a project
 npm install --save-dev @rockholla/git-npm-release
 ```
 
-When you're done developing everything for a release on your project and have committed everything:
+When you're done developing everything for a release on your project and have it all committed:
 
 ```
 ./node_modules/.bin/git-npm-release [public|restricted (default = public)]
@@ -22,7 +22,7 @@ When you're done developing everything for a release on your project and have co
 The command will do the following:
 
 1. Ensure that no changes are unstaged in your project
-2. Ask you whether this is a major, minor, or patch release so that package.json can be updated accordingly. You can also just tell the release process that you'll update yourself, and wait for you to do so.
+2. Ask you whether this is a major, minor, or patch release so that package.json can be updated accordingly. You can also just opt to use whatever version is currently in `package.json`
 3. Create a git commit after updating the package.json version (if applicable)
 4. If you're on a branch other than `master` (e.g. using git-flow and on `develop`), it will merge your branch into the `master` branch
 5. Create a tag based on your package.json version

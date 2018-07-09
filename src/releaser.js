@@ -31,7 +31,7 @@ class Releaser {
     return inquirer.prompt({
       type: 'list',
       name: 'releaseType',
-      choices: ['Major', 'Minor', 'Patch'],
+      choices: ['Major', 'Minor', 'Patch', 'Current package.json version'],
       message: 'What type of release is this?'
     }).then((response) => {
       let version = this.packageJson.version.split('.')
@@ -44,6 +44,9 @@ class Releaser {
           break
         case 'Patch':
           version[2]++
+          break
+        case 'Current package.json version':
+          // version stays the same
           break
         default:
           throw new Error(`Invalid release type ${response.releaseType}`)
