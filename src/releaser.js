@@ -56,7 +56,7 @@ class Releaser {
       }
       this.packageJson.version = version.join('.')
       fs.writeFileSync(path.resolve(this.projectPath, 'package.json'), JSON.stringify(this.packageJson, null, 2))
-      shell.exec(`npm install`, { cwd: this.projectPath })
+      shell.exec('npm install', { cwd: this.projectPath })
       shell.exec('git add .', { cwd: this.projectPath })
       shell.exec(`git commit -m "updating package.json to ${this.packageJson.version} via git-npm-release"`)
       let currentBranch = shell.exec('git rev-parse --abbrev-ref HEAD', { cwd: this.projectPath }).trim()
