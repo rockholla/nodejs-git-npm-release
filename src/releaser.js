@@ -38,9 +38,12 @@ class Releaser {
       switch (response.releaseType) {
         case 'Major':
           version[0]++
+          version[1] = 0
+          version[2] = 0
           break
         case 'Minor':
           version[1]++
+          version[2] = 0
           break
         case 'Patch':
           version[2]++
