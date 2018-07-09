@@ -1,6 +1,6 @@
 {
   "name": "@rockholla/git-npm-release",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A helper around packaging and pushing an npm and git release for a project",
   "private": false,
   "keywords": [
